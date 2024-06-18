@@ -13,7 +13,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/tracker" , tracker)
 
-
+app.get('/', (req,res) => {
+  res.send("Welcome to GET/")
+})
 
 
 app.post('/login', async (req, res) => {
