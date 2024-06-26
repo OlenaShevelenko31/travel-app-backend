@@ -75,12 +75,14 @@ app.post('/login', async (req, res) => {
           pass: 'cedv ufsa sicm hjqc'
         }
       });
-      const encodedToken = encodeURIComponent(token).replace(/\./g, "%2E");
+      // const encodedToken = encodeURIComponent(token).replace(/\./g, "%2E");
+      const resetPasswordLink = `https://travel-tracker-application.netlify.app/resetPassword/${encodeURIComponent(token)}`;
+
       var mailOptions = {
         from: 'shevelenko.work@gmail.com',
         to: email,
         subject: 'Reset Password',
-        text: `https://travel-tracker-application.netlify.app/resetPassword/${token}`
+        text: `Click the following link to reset your password: ${resetPasswordLink}`
 
       };
       
