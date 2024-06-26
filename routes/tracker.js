@@ -13,7 +13,6 @@ router.get('/', async (req, res) => {
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
-
         res.json({ places: user.places });
     } catch (error) {
         console.error('Error fetching places:', error);
