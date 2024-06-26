@@ -76,7 +76,7 @@ app.post('/login', async (req, res) => {
         }
       });
       // const encodedToken = encodeURIComponent(token).replace(/\./g, "%2E");
-      const resetPasswordLink = `https://travel-tracker-application.netlify.app/resetPassword/${token}`;
+      const resetPasswordLink = `https://travel-tracker-application.netlify.app/resetPassword/${encodeURIComponent(token)}`;
 
       var mailOptions = {
         from: 'shevelenko.work@gmail.com',
