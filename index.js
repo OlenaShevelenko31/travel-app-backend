@@ -80,7 +80,7 @@ app.post('/login', async (req, res) => {
         from: 'shevelenko.work@gmail.com',
         to: email,
         subject: 'Reset Password',
-        text: `http://localhost:5173/resetPassword/${encodedToken}`
+        text: `https://travel-tracker-application.netlify.app/resetPassword/${encodedToken}`
       };
       
       transporter.sendMail(mailOptions, function(error, info){
